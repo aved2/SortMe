@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import {HashRouter, Route, Routes} from 'react-router-dom'
 import Header from './components/Header'
 import Logobar from './components/Logobar'
 import Info from './components/Info'
@@ -13,11 +13,11 @@ function App() {
   const [length, setLength] = useState(50);
 
   return (
-    <Router>
+    <HashRouter>
     <div className="App">
       <Logobar />
       <Routes >
-        <Route path='/SortMe' 
+        <Route path='/' 
         element={
           <>
           <Header length = {length} 
@@ -38,7 +38,7 @@ function App() {
     <Footer />
 
     </div>
-    </Router>
+    </HashRouter>
   );
 }
 
