@@ -17,7 +17,7 @@ function App() {
     <div className="App">
       <Logobar />
       <Routes >
-        <Route path='/' 
+        <Route path='/SortMe' 
         element={
           <>
           <Header length = {length} 
