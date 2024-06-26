@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&display=swap');
 
+* {
+  box-sizing: border-box;
+  max-width: 100vw;
+}
+
 html, body{
   background-color: #1f1f1f;
-  box-sizing: border-box;
   max-height: 100px;
+  max-width: 100vw;
 }
 
 .App {
@@ -18,35 +23,37 @@ html, body{
   left: 0;
   right: 0;
   height: 80px;
-  text-align: center;
-  height: 80px;
+  width: 100%;
   border-bottom: solid #156064 6px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
 }
 
 .logo {
   position: relative;
   margin-top: 7px;
   height: 65px;
+
 }
 
 .desc {
   height: 60px;
-  position: absolute;
-  left: 18px;
-  margin-top: 15px;
+  max-width: 200px;
+  margin-top: 15px;;
 }
 
 .howItWorks {
-  position: absolute;
   height: 25px;
-  right: 30px;
   margin-top: 35px;
 }
 
 .info {
   margin: auto;
+  display: flex;
+  flex-direction: column  ;
   margin-top: 90px;
-  max-width: 1000px;
+  max-width: 90vw;
 }
 
 .backBtn {
@@ -55,31 +62,36 @@ html, body{
   background-color: #fac748;
   color: #1f1f1f;
   text-decoration: none;
+  max-width: 70px;
   border-radius: 3px ;
   padding: 2px 6px;
-  margin-right: 800px;
   margin-bottom: 10px;
 }
 
 
 
-.info img{
+.info-img{
   height: 400px;
-  display: block;
-  margin: 20px auto;
-  border-radius: 6px;
+  margin: 10px 0px;
+  max-width: 700px;
+  max-height: 70vw;
+}
+.heap-img{
+  height: 400px;
+  margin: 10px 0px;
+  max-width: 530px;
+  max-height: 70vw;
 }
 
 .heapVisual {
-  padding-top: 110px;
-  padding-bottom: 120px;
   scale: 150%;
+  max-width: 90vw;
 }
 
 .info h3 {
   font-size: 20px;
   color: #fac748;
-  margin-top: -25px;
+  margin-top: 10px;
 }
 
 .info h4 {
@@ -98,6 +110,7 @@ html, body{
   -webkit-appearance: none;
   background: transparent;
   margin-left: 30px;
+  margin-bottom: 10px;
   width: 200px;
 }
 
@@ -129,8 +142,8 @@ input[type="range"]::-webkit-slider-thumb {
   background-color: #f2fdff;
   color: #156064;
   font-size: 24px;
-  height: 30px;
-  width: 30px;
+  height: 35px;
+  width: 35px;
   border-style: solid;
   border-radius: 7px;
   text-align: center;
@@ -146,6 +159,7 @@ input[type="range"]::-webkit-slider-thumb {
   display: flex;
   align-items: space-between;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .btns {
@@ -201,7 +215,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 .container {
   margin-top: 0%;
-  min-width: block-size ;
+  min-width: block-size;
 }
 
 
@@ -224,8 +238,9 @@ input[type="range"]::-webkit-slider-thumb {
 
 .lGraph, .rGraph{
   height: 450px;
-  min-width: 570px;
   max-width: 570px;
+  width: 70%;
+  padding: 0px 4px;
   margin: auto;
   border-style: solid;
   border-width: 3px;
@@ -235,20 +250,47 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 10px;
   outline: none;
   box-shadow: 0 0 12px #156064;
+  flex-shrink: 2;
 }
+
+@media screen and (max-width: 600px) {
+  .lGraph, .rGraph {
+    width: 95%;
+    justify-self: start;
+    height: 380px;
+  }
+  .desc {
+    display: none;
+  }
+  .logo {
+    height: 60px;
+    width: 220px;
+  }
+  .howItWorks {
+    height: 20px;
+    width: 120px;
+    margin-right: 10px;
+  }
+  .arrlen {
+    display: none;
+  }
+}
+  
 
 
 .graphs {
   display: flex;
   justify-content: center;
   align-items: space-between;
+  flex-wrap: wrap;
   margin-top: 0px;
   gap: 30px;
 }
 .graph {
   padding: none;
   margin-top: 100px;
-  margin-right: 10px;
+  margin-right: 5px;
+  margin-left: 10px;
 }
 
 .main {

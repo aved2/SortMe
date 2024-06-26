@@ -7,6 +7,7 @@ import info from './images/info.png'
 
 const Logobar = () => {
   return (
+    <div style={{display:"flex"}}>
     <div className='Logobar'>
       <img className = 'desc' src={desc1} alt="Description" />
       <Link to='/' >
@@ -15,7 +16,7 @@ const Logobar = () => {
       <Link className='infoLink' to='/info'>
         <img className = 'howItWorks' src={info} alt="How It Works" />
       </Link> 
-      
+    </div>
     </div>
   )
 }

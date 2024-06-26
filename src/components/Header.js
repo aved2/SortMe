@@ -6,7 +6,7 @@ const Header = ({length, setLength, onStart}) => {
   
   return (
     <div className = 'header'>
-        <h1>Array Length: </h1>
+        <h1 className='arrlen'>Array Length: </h1>
         <Slider 
         length = {length}
         setLength = {setLength}/>
